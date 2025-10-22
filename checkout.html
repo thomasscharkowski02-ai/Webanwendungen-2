@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasse • Lecker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <!--
+    Projekt: Lecker v3 – statischer Prototyp
+    Hinweise:
+    - Farben/Spacing/Typo zentral in style.css via :root-Variablen anpassen.
+    - Preise/Texte/Konfigurator-Optionen zentral in script.js im CONFIG-Objekt pflegen.
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-branding">
+  <a href="index.html" class="site-logo-link" aria-label="Zur Startseite">
+    <img src="img/logo.png" alt="Lecker Logo" class="site-logo">
+  </a>
+</div>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+            <li><a href="index.html" class="">Startseite</a></li>
+            <li><a href="configurator.html" class="">Pizza zusammenstellen</a></li>
+            <li><a href="about.html" class="">Über uns</a></li>
+            <li><a href="contact.html" class="">Kontakt</a></li>
+            <li><a href="cart.html" class="active">Warenkorb</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main container">
+
+    <section class="grid-2">
+      <div class="panel">
+        <h2>Lieferadresse & Termin</h2>
+        <form id="checkout-form" class="form">
+          <div class="form-group">
+            <label for="co-name">Vollständiger Name</label>
+            <input id="co-name" type="text" required />
+          </div>
+          <div class="form-group">
+            <label for="co-street">Straße & Hausnummer</label>
+            <input id="co-street" type="text" required />
+          </div>
+          <div class="form-row">
+            <label for="co-zip">PLZ</label>
+            <input id="co-zip" type="text" required />
+          </div>
+          <div class="form-row">
+            <label for="co-city">Stadt</label>
+            <input id="co-city" type="text" required />
+          </div>
+          <div class="form-group">
+            <label for="co-phone">Telefon</label>
+            <input id="co-phone" type="tel" placeholder="+49 ..." pattern="[0-9+\-\s]+" />
+          </div>
+          <div class="form-group">
+            <label for="co-email">E-Mail</label>
+            <input id="co-email" type="email" required />
+          </div>
+          <div class="form-group">
+            <label for="co-datetime">Liefertermin</label>
+            <input id="co-datetime" type="datetime-local" required />
+          </div>
+          <div class="form-group">
+            <label for="co-note">Bemerkungen</label>
+            <textarea id="co-note" rows="3" placeholder="z. B. Klingeln bei Nachbar, Allergien …"></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Bestellung abschließen</button>
+        </form>
+        <p class="muted">Hinweis: Prototyp – es wird keine echte Bestellung versendet.</p>
+      </div>
+
+      <aside class="panel">
+        <h2>Ihre Bestellung</h2>
+        <ul id="checkout-list" class="mini-cart-list"></ul>
+        <div class="summary-total">
+          <span>Gesamt</span> <strong id="checkout-total">0,00 €</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section id="order-confirmation" class="card" style="display:none;">
+      <h2>Vielen Dank für Ihre Bestellung!</h2>
+      <p>Wir haben Ihre Daten erhalten und bereiten Ihre Pizza frisch für den gewählten Liefertermin zu.</p>
+      <a href="index.html" class="btn-secondary">Zurück zur Startseite</a>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Byte&Bite GmbH. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+</body>
+</html>

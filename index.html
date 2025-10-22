@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startseite • Lecker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <!--
+    Projekt: Lieferant "Lecker" – statischer Prototyp
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-branding">
+  <a href="index.html" class="site-logo-link" aria-label="Zur Startseite">
+    <img src="img/logo.png" alt="Lecker Logo" class="site-logo">
+  </a>
+</div>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+            <li><a href="index.html" class="active">Startseite</a></li>
+            <li><a href="configurator.html" class="">Pizza zusammenstellen</a></li>
+            <li><a href="about.html" class="">Über uns</a></li>
+            <li><a href="contact.html" class="">Kontakt</a></li>
+            <li><a href="cart.html" class="">Warenkorb</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main container">
+
+    <section class="card">
+      <h2>Willkommen bei Lecker</h2>
+      <p>
+        Schön, dass Sie da sind! Bei <strong>Lecker</strong> dreht sich alles um Pizza – frisch, individuell
+        konfigurierbar und mit viel Liebe zubereitet. Wählen Sie aus hochwertigen Zutaten und stellen Sie Ihre Wunschpizza
+        zusammen.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Gründe, warum Sie unsere Pizza lieben werden</h2>
+      <ul class="checklist">
+        <li>Frische, regionale Zutaten</li>
+        <li>Knuspriger Teig – nach Ihrer Lieblingsart</li>
+        <li>Individuelle Konfiguration und faire Preise</li>
+        <li>Schnelle Zubereitung und freundlicher Service</li>
+        <li>Vegetarische und glutenfreie Optionen</li>
+      </ul>
+    </section>
+
+    <section class="card center">
+      <h2>Pizza des Tages</h2>
+      <p id="daily-special" class="accent">Wird geladen …</p>
+      <p class="muted">Tipp: In <a href="configurator.html">Pizza zusammenstellen</a> können Sie Ihre Wunschpizza erstellen.</p>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Byte&Bite GmbH. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+</body>
+</html>

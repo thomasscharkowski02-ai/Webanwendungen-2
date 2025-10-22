@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt • Lecker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <!--
+    Projekt: Lecker v3 – statischer Prototyp
+    Hinweise:
+    - Farben/Spacing/Typo zentral in style.css via :root-Variablen anpassen.
+    - Preise/Texte/Konfigurator-Optionen zentral in script.js im CONFIG-Objekt pflegen.
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-branding">
+  <a href="index.html" class="site-logo-link" aria-label="Zur Startseite">
+    <img src="img/logo.png" alt="Lecker Logo" class="site-logo">
+  </a>
+</div>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+            <li><a href="index.html" class="">Startseite</a></li>
+            <li><a href="configurator.html" class="">Pizza zusammenstellen</a></li>
+            <li><a href="about.html" class="">Über uns</a></li>
+            <li><a href="contact.html" class="active">Kontakt</a></li>
+            <li><a href="cart.html" class="">Warenkorb</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main container">
+
+    <section class="card">
+      <h2>Kontakt</h2>
+      <form class="form" id="contact-form">
+        <div class="form-group">
+          <label for="c-name">Name</label>
+          <input type="text" id="c-name" required />
+        </div>
+        <div class="form-group">
+          <label for="c-phone">Telefon</label>
+          <input type="tel" id="c-phone" placeholder="+49 ..." pattern="[0-9+\-\s]+" />
+        </div>
+        <div class="form-group">
+          <label for="c-email">E-Mail</label>
+          <input type="email" id="c-email" required />
+        </div>
+        <div class="form-group">
+          <label for="c-msg">Nachricht</label>
+          <textarea id="c-msg" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Abschicken</button>
+      </form>
+      <p class="muted">Hinweis: Dies ist ein Prototyp. Das Formular sendet noch keine echten E-Mails.</p>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Byte&Bite GmbH. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Über uns • Lecker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <!--
+    Projekt: Lecker v3 – statischer Prototyp
+    Hinweise:
+    - Farben/Spacing/Typo zentral in style.css via :root-Variablen anpassen.
+    - Preise/Texte/Konfigurator-Optionen zentral in script.js im CONFIG-Objekt pflegen.
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-branding">
+  <a href="index.html" class="site-logo-link" aria-label="Zur Startseite">
+    <img src="img/logo.png" alt="Lecker Logo" class="site-logo">
+  </a>
+</div>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+            <li><a href="index.html" class="">Startseite</a></li>
+            <li><a href="configurator.html" class="">Pizza zusammenstellen</a></li>
+            <li><a href="about.html" class="active">Über uns</a></li>
+            <li><a href="contact.html" class="">Kontakt</a></li>
+            <li><a href="cart.html" class="">Warenkorb</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main container">
+
+    <section class="card">
+      <h2>Die Idee von Lecker</h2>
+      <p>
+        Drei Studenten – <strong>Maxmilian</strong>, <strong>Thomas</strong> und <strong>Jan</strong> – teilen eine große Leidenschaft:
+        richtig gute Pizza. Zwischen Vorlesungen, Projekten und Prüfungen entstand die Vision, ihre Lieblingspizza
+        mit der Welt zu teilen. Was als WG-Experiment begann, wurde zum ersten gemeinsamen Business –
+        <em>Lecker</em>.
+      </p>
+      <p>
+        Ihr Anspruch: beste Zutaten, transparente Preise und maximaler Geschmack. Statt einer starren Speisekarte
+        setzen die drei auf ein modernes Konzept: eine Pizza, die Sie selbst konfigurieren – von Teig und Soße,
+        über Käse bis hin zu feinen Belägen. So entsteht genau die Pizza, die Sie lieben.
+      </p>
+      <p>
+        Heute arbeiten die drei an ihrer Vision, neben dem Studium ein nachhaltiges, kundenorientiertes Pizza-Startup
+        aufzubauen. Mit Liebe zum Detail, viel Teamgeist und einem Schuss Unternehmergeist.
+      </p>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Byte&Bite GmbH. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+</body>
+</html>

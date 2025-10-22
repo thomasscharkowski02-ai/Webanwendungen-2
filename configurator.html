@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza zusammenstellen • Lecker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <!--
+    Projekt: Lecker v3 – statischer Prototyp
+    Hinweise:
+    - Farben/Spacing/Typo zentral in style.css via :root-Variablen anpassen.
+    - Preise/Texte/Konfigurator-Optionen zentral in script.js im CONFIG-Objekt pflegen.
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-branding">
+  <a href="index.html" class="site-logo-link" aria-label="Zur Startseite">
+    <img src="img/logo.png" alt="Lecker Logo" class="site-logo">
+  </a>
+</div>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+            <li><a href="index.html" class="">Startseite</a></li>
+            <li><a href="configurator.html" class="active">Pizza zusammenstellen</a></li>
+            <li><a href="about.html" class="">Über uns</a></li>
+            <li><a href="contact.html" class="">Kontakt</a></li>
+            <li><a href="cart.html" class="">Warenkorb</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main container">
+
+    <section class="grid-2">
+      <div class="panel">
+        <h2>Stelle deine Pizza zusammen</h2>
+
+        <div class="form-row">
+          <label for="size">Größe</label>
+          <select id="size" aria-label="Größe wählen">
+            <option value="26">Klein, 26cm</option>
+            <option value="30" selected>Mittel, 30cm</option>
+            <option value="36">Groß, 36cm</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="dough">Teig</label>
+          <select id="dough" aria-label="Teig wählen">
+            <option value="american">Amerikanisch – dick &amp; fluffig</option>
+            <option value="italian" selected>Italienisch – dünn &amp; knusprig</option>
+            <option value="glutenfree">Glutenfrei</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="sauce">Soße</label>
+          <select id="sauce" aria-label="Soße wählen">
+            <option value="tomato" selected>Mediterrane Tomatensoße</option>
+            <option value="white">Weiße Soße mit Crème fraîche</option>
+            <option value="bbq">BBQ-Soße</option>
+            <option value="oilherbs">Olivenöl mit Kräutern</option>
+          </select>
+        </div>
+
+        <fieldset class="fieldset">
+          <legend>Käse</legend>
+          <label class="chip"><input type="checkbox" class="cheese" value="mozzarella" checked /> Mozzarella</label>
+          <label class="chip"><input type="checkbox" class="cheese" value="cheddar" /> Cheddar</label>
+          <label class="chip"><input type="checkbox" class="cheese" value="goat" /> Ziegenkäse</label>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend>Beläge</legend>
+
+          <h3 class="subtle">Nicht-vegetarisch</h3>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" class="topping" value="salami" /> Salami</label>
+            <label class="chip"><input type="checkbox" class="topping" value="ham" /> Hinterschinken</label>
+            <label class="chip"><input type="checkbox" class="topping" value="parma" /> Parmaschinken</label>
+            <label class="chip"><input type="checkbox" class="topping" value="chicken" /> Hähnchen</label>
+          </div>
+
+          <h3 class="subtle">Vegetarisch</h3>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" class="topping" value="porcini" /> Steinpilze</label>
+            <label class="chip"><input type="checkbox" class="topping" value="paprika" /> Paprika</label>
+            <label class="chip"><input type="checkbox" class="topping" value="onion" /> Zwiebeln</label>
+            <label class="chip"><input type="checkbox" class="topping" value="olives" /> Oliven</label>
+            <label class="chip"><input type="checkbox" class="topping" value="rucola" /> Rucola</label>
+            <label class="chip"><input type="checkbox" class="topping" value="peperoni" /> Peperoni</label>
+            <label class="chip"><input type="checkbox" class="topping" value="corn" /> Mais</label>
+            <label class="chip"><input type="checkbox" class="topping" value="mushrooms" /> Champignons</label>
+          </div>
+        </fieldset>
+
+        <div class="form-row">
+          <label for="qty">Anzahl</label>
+          <input type="number" id="qty" min="1" value="1" />
+        </div>
+
+        <div class="form-row">
+          <label for="note">Anmerkungen</label>
+          <textarea id="note" rows="3" placeholder="z. B. wenig Käse, extra knusprig …"></textarea>
+        </div>
+
+        <div class="pricebar">
+          <div>Zwischensumme: <strong id="price">–</strong></div>
+          <button id="add-to-cart" class="btn-primary">In den Warenkorb</button>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <h2>Warenkorb</h2>
+        <div id="mini-cart-empty">Noch keine Artikel im Warenkorb.</div>
+        <ul id="mini-cart-list" class="mini-cart-list"></ul>
+        <div id="mini-cart-summary" class="mini-cart-summary" style="display:none;">
+          <div>Summe: <strong id="mini-cart-total">0,00 €</strong></div>
+          <a href="cart.html" class="btn-secondary">Zum Warenkorb</a>
+        </div>
+      </aside>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Byte&Bite GmbH. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+</body>
+</html>

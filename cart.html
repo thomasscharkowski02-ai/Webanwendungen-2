@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warenkorb • Lecker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <!--
+    Projekt: Lecker v3 – statischer Prototyp
+    Hinweise:
+    - Farben/Spacing/Typo zentral in style.css via :root-Variablen anpassen.
+    - Preise/Texte/Konfigurator-Optionen zentral in script.js im CONFIG-Objekt pflegen.
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-branding">
+  <a href="index.html" class="site-logo-link" aria-label="Zur Startseite">
+    <img src="img/logo.png" alt="Lecker Logo" class="site-logo">
+  </a>
+</div>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+            <li><a href="index.html" class="">Startseite</a></li>
+            <li><a href="configurator.html" class="">Pizza zusammenstellen</a></li>
+            <li><a href="about.html" class="">Über uns</a></li>
+            <li><a href="contact.html" class="">Kontakt</a></li>
+            <li><a href="cart.html" class="active">Warenkorb</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main container">
+
+    <section class="grid-2">
+      <div class="panel">
+        <h2>Ihre Artikel</h2>
+        <div id="cart-empty">Ihr Warenkorb ist noch leer.</div>
+        <table id="cart-table" class="cart-table" style="display:none;">
+          <thead>
+            <tr>
+              <th>Konfiguration</th>
+              <th>Menge</th>
+              <th>Preis</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart-body"></tbody>
+        </table>
+      </div>
+
+      <aside class="panel">
+        <h2>Zusammenfassung</h2>
+        <div class="summary-line">
+          <span>Zwischensumme</span> <strong id="cart-subtotal">0,00 €</strong>
+        </div>
+        <div class="summary-line">
+          <span>Lieferung</span> <strong id="cart-shipping">0,00 €</strong>
+        </div>
+        <div class="summary-total">
+          <span>Gesamt</span> <strong id="cart-total">0,00 €</strong>
+        </div>
+        <a href="checkout.html" class="btn-primary fullwidth">Zur Kasse</a>
+      </aside>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Byte&Bite GmbH. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+</body>
+</html>
